@@ -4,60 +4,82 @@ A Python project using OpenCV and MediaPipe for real-time hand tracking and gest
 
 ![Project Poster](Poster.jpg)
 
+## Demo
+
+[Add a GIF or video showing it working]
+
 ## Overview
 
-This project leverages computer vision to recognize hand gestures from webcam input and control the system volume based on finger positions. It uses the following technologies:
-- **OpenCV**: For capturing webcam video and processing images.
-- **MediaPipe**: For hand landmark detection.
-- **pycaw**: For controlling system volume on Windows.
+This project leverages computer vision to recognize hand gestures from webcam input and control the system volume based on finger positions.
 
-## Key Features
+## Technologies Used
 
-- Real-time hand tracking with webcam.
-- Detects fingertip positions and distance between fingers.
-- Adjusts system volume using pinch gestures (thumb and index finger distance).
-- Visual feedback on the video stream (landmarks, connecting lines, FPS, and a volume bar).
+- **Python 3.x**
+- **OpenCV** - For capturing webcam video and processing images
+- **MediaPipe** - For hand landmark detection
+- **pycaw** - For controlling system volume on Windows
 
-## File Structure
-
-| File Name                                   | Description                                           |
-|----------------------------------------------|-------------------------------------------------------|
-| 1_basicvideocapturing.py                    | Basic webcam video capturing                          |
-| 2_basichandrecoginition.py                   | Basic hand detection using MediaPipe                  |
-| 3_Connecttipsoffingure.py                   | Connects tips of fingers                             |
-| 4_addcircletofingretips.py                  | Draws circles on fingertip positions                 |
-| 5_showfps.py                                | Displays frames per second on video                  |
-| 6_Calculatingthedistancebetweenfingures.py  | Calculates distance between fingertips               |
-| 7_makingbarwithdistance.py                  | Creates a bar to visualize distance/volume           |
-| 8_connectingwithsystemvolume.py             | Controls system volume via finger distance           |
-| Finalproject.py                             | **Main project file combining all features**          |
-| Poster.jpg                                  | Project poster image                                 |
-
-## Getting Started
-
-### Prerequisites
-
-- Python 3.7+
-- Windows OS (pycaw is Windows-specific)
-- Webcam
-
-### Install Required Libraries
+## Installation
 
 ```bash
 pip install opencv-python mediapipe pycaw comtypes
 ```
 
-### Usage
-
-Run the main file:
+Or install from requirements.txt:
 
 ```bash
-python Finalproject.py
+pip install -r requirements.txt
 ```
 
-- Show your hand to the webcam.
-- Pinch gesture (thumb and index finger) controls the volume.
-- Press `Q` or `Esc` to quit.
+## How to Run
+
+```bash
+python src/Finalproject.py
+```
+
+- Show your hand to the webcam
+- Pinch gesture (thumb and index finger) controls the volume
+- Press `Q` or `Esc` to quit
+
+## Features
+
+- Real-time hand tracking
+- Gesture-based volume control
+- FPS display
+- Visual feedback with landmarks and volume bar
+- Detects fingertip positions and distance between fingers
+
+## Future Improvements
+
+- Add more gestures
+- Improve accuracy
+- Support for multiple platforms (currently Windows-only)
+- Add gesture customization options
+
+## File Structure
+
+The project is organized as follows:
+
+- **src/** - Contains all Python source files
+  - `1_basicvideocapturing.py` - Basic webcam video capturing
+  - `2_basichandrecognition.py` - Basic hand detection using MediaPipe
+  - `3_Connecttipsoffinger.py` - Connects tips of fingers
+  - `4_addcircletofingertips.py` - Draws circles on fingertip positions
+  - `5_showfps.py` - Displays frames per second on video
+  - `6_Calculatingthedistancebetweenfingers.py` - Calculates distance between fingertips
+  - `7_makingbarwithdistance.py` - Creates a bar to visualize distance/volume
+  - `8_connectingwithsystemvolume.py` - Controls system volume via finger distance
+  - `Finalproject.py` - **Main project file combining all features**
+- **docs/** - Documentation files
+- `requirements.txt` - Python package dependencies
+- `LICENSE` - MIT License
+- `Poster.jpg` - Project poster image
+
+## Prerequisites
+
+- Python 3.7+
+- Windows OS (pycaw is Windows-specific)
+- Webcam
 
 ## How It Works
 
